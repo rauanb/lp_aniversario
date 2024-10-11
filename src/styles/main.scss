@@ -2,6 +2,7 @@
 @use 'hero';
 @use 'components/infos_bar';
 @use 'components/buttons';
+@use 'event';
 
 * {
     margin: 0;
@@ -17,12 +18,24 @@
     margin: 0 auto;
 
     @media (min-width: 640px) and (max-width: 1024px) {
-        background-color: red;
+        // background-color: red;
         max-width: 90%;
     }
 
     @media (max-width: 639px) {
-        background-color: blue;
+        // background-color: blue;
         max-width: 80%;
+    }
+}
+
+.footer {
+    padding: 16px;
+    &__text {
+        text-align: center;
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            color: variables.$colorText;
+        }
     }
 }
